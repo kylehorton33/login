@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
-    import axios from 'axios';
+    import API from '$lib/api';
     import Cookies from 'js-cookie';
 	let email: string, password: string;
 
@@ -13,7 +13,7 @@
 	}
     async function loginUser() {
         try {
-            const res = await axios.post('http://localhost:5000/users/login', {
+            const res = await API.post('/users/login', {
                     email, password
             })
             Cookies.set('token', res.data.token, { sameSite: 'strict' })
