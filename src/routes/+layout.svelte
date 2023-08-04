@@ -5,10 +5,16 @@
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
+
+	import { AppBar } from '@skeletonlabs/skeleton';
 </script>
 
 
-<div class="container h-full mx-auto flex justify-center items-center">
+<AppBar slotTrail="place-content-end">
+	<svelte:fragment slot="trail">-</svelte:fragment>
+</AppBar>
+
+<div class="container h-full mx-auto p-4 flex justify-center items-center">
 	<div class="space-y-5">
 		<slot />
 	</div>

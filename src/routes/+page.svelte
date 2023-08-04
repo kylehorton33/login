@@ -4,22 +4,12 @@
 	const token = Cookies.get('token');
 </script>
 
-<h1 class="h1">Let's get cracking bones!</h1>
-<p>Start by exploring:</p>
+<h1 class="h1">Explore</h1>
 <ul>
 	<li>
-		<code class="code">/src/routes/+layout.svelte</code> - barebones layout, the CSS import order is
-		critical!
+		<a href="/login"><code class="code">/login</code></a> - for existing users
 	</li>
 	<li>
-		<code class="code">/src/app.postcss</code> - minimal css to make the page full screen, may not be
-		relevant for your project
+		<a href="/signup"><code class="code">/signup</code></a> - for new users
 	</li>
-	<li>
-		<code class="code">/src/routes/+page.svelte</code> - this page, you can replace the contents
-	</li>
-	<div class="w-full">
-		<pre class="break-all">{token}</pre>
-	</div>
-	
 </ul>

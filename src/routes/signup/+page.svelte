@@ -1,10 +1,9 @@
 <script lang="ts">
     import axios from 'axios';
-	let email: string, username: string, password: string, confirmPassword: string;
+	let email: string, password: string, confirmPassword: string;
 
 	function onSubmit() {
         if (!email) { alert("Enter email!") }
-        if (!username) { alert("Enter username!") }
         if (!password) { alert("Enter password!") }
         if (!confirmPassword) { alert("Enter password confirmation!") }
         if (password != confirmPassword) {
@@ -16,7 +15,7 @@
     async function signupUser() {
         try {
             const res = await axios.post('http://localhost:5000/users/signup', {
-                    email, username, password
+                    email, password
             })
             console.log(res.data)
         } catch (err) {
@@ -26,10 +25,9 @@
 </script>
 
 <form on:submit={onsubmit}>
-	<div class="form space-y-4 p-40">
+	<div class="form space-y-4">
 		<h2>User Signup</h2>
 		<input bind:value={email} class="input" type="email" placeholder="Email" />
-		<input bind:value={username} class="input" type="text" placeholder="Username" />
 		<input bind:value={password} class="input" type="password" placeholder="Password" />
 		<input
 			bind:value={confirmPassword}

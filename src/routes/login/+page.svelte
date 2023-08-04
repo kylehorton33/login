@@ -26,7 +26,7 @@
 </script>
 
 <form on:submit={onsubmit}>
-	<div class="form space-y-4 p-40">
+	<div class="form space-y-4">
 		<h2>User Login</h2>
 		<input bind:value={email} class="input" type="text" placeholder="Email" />
 		<input bind:value={password} class="input" type="password" placeholder="Password" />
@@ -41,5 +41,5 @@
 </div>
 
 <div class="container mx-auto flex justify-center">
-	<a href="/login">Login</a>
+	<a href="/signup">Sign Up</a>
 </div>
